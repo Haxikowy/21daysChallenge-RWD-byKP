@@ -1,144 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/* INSTRUCTIONS
+ *
+ * 1) Keep the text inside .intro-content
+ *    in the same place, but have the background
+ *    extend from one side of the viewport
+ *    to the other, no matter how wide or narrow
+ *    the browser is.
+ *
+ * 2) Limit the maximum width of the text in the
+ *    bottom area.
+ *
+ * You may modify the HTML if needed
+ * (you probably should for this challenge)
+ *
+ */
 
-*,
-*::before,
-*::after {
-   margin: 0;
-   padding: 0;
+* {
    box-sizing: border-box;
 }
-:root {
-   --accent-clr: hsl(184, 33%, 56%);
-   --dark-clr: ;
-   --black: hsl(0, 0%, 0%);
-   --white: hsl(0, 0%, 100%);
 
-   --hamburger-height: 3px;
-   font-family: 'Lato', sans-serif;
-}
 body {
-   background-color: var(--accent-clr);
+   margin: 0;
+   font-family: sans-serif;
 }
 
-header {
-   padding: 1.25em;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+.container {
+   background: #23424a;
+   color: white;
 }
 
-.logo img {
-   width: 5.625em;
+.intro-content {
+   margin: 0 auto;
+   padding: 1.5em;
+   max-width: 750px;
 }
 
-nav {
-   transition: all 1s ease-in-out;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-   position: relative;
-   display: block;
-   width: 30px;
-   height: 3px;
-   background-color: var(--white);
-   border-radius: 25px;
-   opacity: 1;
-
-   transition: opacity 150ms linear, transform 250ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-   content: '';
-   position: absolute;
-   left: 0;
-}
-.hamburger::before {
-   bottom: 7px;
-}
-
-.hamburger::after {
-   top: 7px;
-}
-
-.nav-toggle .hamburger::before {
-   opacity: 0;
-}
-
-.nav-toggle .hamburger {
-   transform: rotate(45deg);
-}
-
-.nav-toggle .hamburger::after {
-   transform: rotate(90deg) translate(-7px);
+.intro-content > * {
+   width: 50%;
 }
 
 main {
-   position: relative;
-   height: 75vh;
-   padding: 3em 1.25em;
-   overflow: hidden;
-}
-
-main::before {
-   content: '';
-   position: absolute;
-   z-index: -1;
-   top: -10%;
-   right: -35%;
-   bottom: -10%;
-   left: 35%;
-   border-radius: 50%;
-   background: url(./img/background.jpg);
-   background-position: bottom center;
-   opacity: 0.4;
-}
-main::after {
-   content: '';
-   position: absolute;
-   z-index: -2;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   background-color: var(--white);
-}
-
-main h1 {
-   font-size: 2.5rem;
-   font-weight: 900;
-   margin-bottom: 0.5em;
-}
-
-main p {
-   font-size: 1.2rem;
-   color: var(--dark-clr);
-   margin-bottom: 1.5em;
-}
-
-.cta {
-   display: flex;
-   justify-content: center;
-}
-
-.cta .btn {
-   padding: 0.5em 0.8em;
-   margin: 0.625em;
-   font-weight: bold;
-   font-size: 1.05rem;
-   text-decoration: none;
-}
-
-.cta .btn:nth-child(1) {
-   background: none;
-   border: 3px solid var(--accent-clr);
-   color: var(--black);
-}
-
-.cta .btn:nth-child(2) {
-   background: var(--accent-clr);
-   border: none;
-   color: var(--white);
+   margin: 0 auto;
+   padding: 1.5em;
+   max-width: 750px;
 }
