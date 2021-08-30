@@ -1,71 +1,59 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,700');
-*,
-*::before,
-*::after {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
 :root {
-   line-height: 1.6;
-   font-family: 'Rubik', sans-serif;
-}
-
-img {
-   max-width: 100%;
-   height: auto;
-}
-
-.grid {
-   width: 90%;
-   max-width: 960px;
-   display: flex;
-   margin: 0 auto;
+   font-family: 'Roboto', sans-serif;
+   color: white;
 }
 
 .col {
-   flex: 1;
-   padding: 0 1em;
+   width: 50%;
+   max-width: 710px;
+}
+
+.container {
+   background-color: hsl(192, 36%, 21%);
+   padding: 9em 5em;
+}
+
+.title {
+   margin-bottom: 0.5em;
+   font-size: 3rem;
+   font-weight: 900;
+}
+
+.text {
+   margin-bottom: 3em;
+   color: hsl(190, 10%, 88%);
+   font-size: 1.3125rem;
+   font-weight: 400;
 }
 
 .btn {
    display: inline-block;
+   padding: 0.75em 1.75em;
+   border-radius: 55px;
+   background-color: hsl(184, 68%, 54%);
+   color: hsl(185, 73%, 10%);
+   font-size: 1.3125rem;
+   font-weight: 700;
    text-decoration: none;
-   color: white;
-   background-color: hsl(215, 50%, 35%);
-   padding: 1em 4em;
-}
-
-.hero {
-   background-image: linear-gradient(
-      to right,
-      hsl(180, 50%, 50%) 0%,
-      hsl(210, 50%, 50%) 100%
-   );
-   padding: 10vh 0;
-}
-
-.hero-title {
-   color: hsl(215, 50%, 35%);
-   margin-bottom: 0.25em;
-   line-height: 1;
-   font-size: 8vw;
    text-transform: uppercase;
 }
 
-.hero-text {
-   font-size: 1.2em;
-   line-height: 1.7;
-   margin-bottom: 1.5em;
-}
-
-.hero-img {
-   box-shadow: 3px 3px 25px 5px hsla(0, 0%, 0%, 0.5);
-}
-
-.more-content {
-   background: url(//unsplash.it/800/400);
-   background-size: cover;
-   height: 1000px;
+@media (max-width: 700px) {
+   :root {
+      font-size: 14px;
+   }
+   .container {
+      padding: 2em 2em 4em;
+   }
+   .col {
+      width: 100%;
+   }
 }
