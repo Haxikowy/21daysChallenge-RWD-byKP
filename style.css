@@ -1,45 +1,71 @@
-/* INSTRUCTIONS
- *
- * 1) Keep the text inside .intro-content
- *    in the same place, but have the background
- *    extend from one side of the viewport
- *    to the other, no matter how wide or narrow
- *    the browser is.
- *
- * 2) Limit the maximum width of the text in the
- *    bottom area.
- *
- * You may modify the HTML if needed
- * (you probably should for this challenge)
- *
- */
-
-* {
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,700');
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
 }
 
-body {
-   margin: 0;
-   font-family: sans-serif;
+:root {
+   line-height: 1.6;
+   font-family: 'Rubik', sans-serif;
 }
 
-.container {
-   background: #23424a;
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+.grid {
+   width: 90%;
+   max-width: 960px;
+   display: flex;
+   margin: 0 auto;
+}
+
+.col {
+   flex: 1;
+   padding: 0 1em;
+}
+
+.btn {
+   display: inline-block;
+   text-decoration: none;
    color: white;
+   background-color: hsl(215, 50%, 35%);
+   padding: 1em 4em;
 }
 
-.intro-content {
-   margin: 0 auto;
-   padding: 1.5em;
-   max-width: 750px;
+.hero {
+   background-image: linear-gradient(
+      to right,
+      hsl(180, 50%, 50%) 0%,
+      hsl(210, 50%, 50%) 100%
+   );
+   padding: 10vh 0;
 }
 
-.intro-content > * {
-   width: 50%;
+.hero-title {
+   color: hsl(215, 50%, 35%);
+   margin-bottom: 0.25em;
+   line-height: 1;
+   font-size: 8vw;
+   text-transform: uppercase;
 }
 
-main {
-   margin: 0 auto;
-   padding: 1.5em;
-   max-width: 750px;
+.hero-text {
+   font-size: 1.2em;
+   line-height: 1.7;
+   margin-bottom: 1.5em;
+}
+
+.hero-img {
+   box-shadow: 3px 3px 25px 5px hsla(0, 0%, 0%, 0.5);
+}
+
+.more-content {
+   background: url(//unsplash.it/800/400);
+   background-size: cover;
+   height: 1000px;
 }
