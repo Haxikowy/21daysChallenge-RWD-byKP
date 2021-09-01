@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -5,20 +7,57 @@
    padding: 0;
    box-sizing: border-box;
 }
-
-.container {
-   margin: 3em auto;
-   width: 1200px;
-   max-width: 100%;
-   background-color: steelblue;
-   display: flex;
-   text-align: center;
+:root {
+   font-family: 'Lato', sans-serif;
+   color: white;
 }
-.col {
-   padding: 3em;
+
+.hero {
+   padding: 6em 0;
+   background-color: hsl(199, 39%, 21%);
+}
+.container {
+   width: 80%;
+   max-width: 1300px;
+   margin: 0 auto;
+}
+.hero__text {
    width: 50%;
 }
 
-.col:nth-child(1) {
-   background-color: orange;
+.hero__text h1 {
+   margin-bottom: 1em;
+   font-size: 3rem;
+   font-weight: 700;
+}
+
+.hero__text p {
+   margin-bottom: 2.5em;
+   color: hsl(0, 0%, 95%);
+   font-size: 1.3125rem;
+}
+
+.btn {
+   display: inline-block;
+   padding: 0.75em 2em;
+   border-radius: 100px;
+   background-color: hsl(189, 72%, 52%);
+   color: hsl(199, 39%, 14%);
+   font-weight: 900;
+   text-transform: uppercase;
+   text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+   opacity: 0.75;
+}
+
+@media (max-width: 720px) {
+   :root {
+      font-size: 14px;
+   }
+   .hero__text {
+      width: 100%;
+   }
 }
