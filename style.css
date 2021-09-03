@@ -9,12 +9,12 @@
 }
 :root {
    font-family: 'Lato', sans-serif;
-   color: white;
 }
 
 .hero {
    padding: 6em 0;
    background-color: hsl(199, 39%, 21%);
+   color: white;
 }
 .container {
    width: 80%;
@@ -53,11 +53,52 @@
    opacity: 0.75;
 }
 
+.feature {
+   padding: 3em 0;
+}
+
+.feature .container {
+   display: flex;
+}
+
+.col {
+   width: 100%;
+   text-align: center;
+}
+.col + .col {
+   margin-left: 1.25em;
+}
+.col__title {
+   padding: 1em 0;
+   color: hsl(280, 22%, 49%);
+   font-weight: 900;
+}
+.col__text {
+   color: hsl(0, 0%, 23%);
+}
+
+.feature + .feature {
+   background-color: #136c72;
+   color: white;
+}
+.feature + .feature .col__title {
+   color: hsl(0, 0%, 100%);
+}
+.feature + .feature .col__text {
+   color: hsl(0, 0%, 95%);
+}
+
 @media (max-width: 720px) {
    :root {
       font-size: 14px;
    }
    .hero__text {
       width: 100%;
+   }
+   .container {
+      flex-wrap: wrap;
+   }
+   .col + .col {
+      margin-left: 0;
    }
 }
