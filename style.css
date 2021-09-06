@@ -4,108 +4,130 @@
 - All text is in the text.md file
 
 // Requirements
-1. Refer to the design specs for the
-   overall layout 
-2. The image should line up with
-   the sidebar in the section
-   below
-
+   1. Get all the navigation items next to one another
+   2. Add a space between all the items
 */
 
-*,
-*::before,
-*::after {
-   box-sizing: border-box;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 body {
-   margin: 0;
-   font-family: 'Roboto', sans-serif;
-   font-size: 1.3rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
 }
 
 img {
-   width: 100%;
+    max-width: 100%;
 }
 
 h1 {
-   font-size: 3rem;
-   font-weight: 900;
-   margin-top: 0;
-}
-h2 {
-   font-size: 2.25rem;
-   font-weight: 900;
-}
-p {
-   line-height: 1.5;
+    font-size: 3rem;
+    margin-top: 0;
 }
 
-.container {
-   width: 80%;
-   max-width: 1100px;
-   margin: 0 auto;
-}
-
-.row {
-   /* display: flex => flex container */
-   display: flex;
-   justify-content: space-between;
-
-   /* can't use yet */
-   /* gap: 100px; */
-}
-
-.col {
-   /* these are now flex items */
-   width: 100%;
-}
-
-.hero {
-   padding: 100px 0;
-   background-color: #23424a;
-   color: #fff;
-   margin-bottom: 2em;
-}
-
-.hero__text {
-   width: 56%;
-}
-
-.hero__img {
-   width: 40%;
-   align-self: flex-start;
-}
-
-.hero p {
-   margin-bottom: 3em;
+.section-title {
+    color: #87629A;
 }
 
 .btn {
-   display: inline-block;
-   text-decoration: none;
-   text-transform: uppercase;
-   color: #23424a;
-   font-weight: 900;
-   background-color: #38cfd9;
-   padding: 0.75em 2em;
-   border-radius: 100px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
 }
 
 .btn:hover,
 .btn:focus {
-   opacity: 0.75;
+    opacity: .75; 
 }
 
-.content__text {
-   width: 56%;
-   color: #136c72;
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.content__aside {
-   width: 40%;
-   padding: 0.5em 1.75em;
-   background-color: #136c72;
-   text-align: center;
-   color: white;
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+
+header {
+    background: #136c72;
+    padding: .5em 0;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;;
+}
+
+.nav__link--button {
+    background: #fff;
+    color: #136c72;
+    padding: .25em 1em;
+    border-radius: 10em;
+}
+
+.nav__link:hover {
+    opacity: .75;
+}
+
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+.primary-content {
+    width: 62%;
+}
+
+.sidebar {
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
 }
