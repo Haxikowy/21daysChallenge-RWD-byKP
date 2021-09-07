@@ -2,105 +2,73 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Conquering Responsive Layouts</title>
-      <link
-         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap"
-         rel="stylesheet"
-      />
       <link rel="stylesheet" href="style.css" />
+      <title>#4 Challenge</title>
    </head>
    <body>
-      <header>
-         <nav class="nav container flex">
-            <ul class="nav__list flex">
-               <li class="nav__item">
-                  <a class="logo" href="#">
-                     <img src="img/logo.svg" alt="company logo" />
-                  </a>
-               </li>
-               <li class="nav__item">
-                  <a href="#" class="nav__link">Home</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#" class="nav__link">About</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#" class="nav__link">Contact</a>
-               </li>
-            </ul>
-            <ul class="nav__list flex">
-               <li class="nav__item">
-                  <a href="#" class="nav__link">Sign In</a>
-               </li>
-               <li class="nav__item">
-                  <a href="#" class="nav__link nav__link--button">Sign up</a>
-               </li>
-            </ul>
-         </nav>
+      <header class="header">
+         <div class="container">
+            <p class="header__text">lorem ipsum sit</p>
+            <h1 class="header__title">
+               Responsive layouts don't have to be a struggle
+            </h1>
+         </div>
       </header>
-
-      <section class="hero">
-         <div class="container row">
-            <div class="hero__text">
-               <h1>Responsive layouts don’t have to be a struggle</h1>
-               <p>
+      <main class="main">
+         <section class="perks container">
+            <h2 class="perks__title">Quality Designs</h2>
+            <div class="row">
+               <p class="perks__text col">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
+                  Dui vivamus arcu felis bibendum ut tristique. Arcu dui vivamus
+                  arcu felis. Sociis natoque penatibus et magnis dis.
                </p>
-               <a href="#" class="btn">I want to learn</a>
+               <p class="perks__text col">
+                  Felis donec et odio pellentesque diam volutpat. Aliquam purus
+                  sit amet luctus venenatis. Turpis in eu mi bibendum neque
+                  egestas congue quisque egestas. Pellentesque sit amet
+                  porttitor eget dolor morbi non
+               </p>
             </div>
-            <img
-               src="img/hero-img.jpg"
-               alt="UX design sketches"
-               class="hero__img"
-            />
-         </div>
-      </section>
-
-      <main class="main container row">
-         <section class="primary-content">
-            <h2 class="section-title">
-               Quality designs made custom, on demand, just for you
-            </h2>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
-               adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-               dolore magna aliqua. Ut enim ad minim veniam.
-            </p>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
-               adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-               dolore magna aliqua. Ut enim ad minim veniam.
-            </p>
          </section>
-         <aside class="sidebar">
-            <h2 class="sidebar-title">Cheap</h2>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam.
-            </p>
-
-            <h2 class="sidebar-title">Quick</h2>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam.
-            </p>
-
-            <h2 class="sidebar-title">Quality</h2>
-            <p>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam.
-            </p>
-         </aside>
+         <section class="hero">
+            <div class="container">
+               <div class="row">
+                  <div class="col">
+                     <h2 class="hero__title">Made custom for you</h2>
+                     <p class="hero__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam.
+                     </p>
+                  </div>
+                  <div class="col">
+                     <img src="img/image-01.jpg" alt="man looking at sun" />
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="hero">
+            <div class="container">
+               <div class="row">
+                  <div class="col">
+                     <h2 class="hero__title">Created with care</h2>
+                     <p class="hero__text">
+                        Felis donec et odio pellentesque diam volutpat. Aliquam
+                        purus sit amet luctus venenatis. Turpis in eu mi
+                        bibendum neque egestas congue quisque egestas.
+                        Pellentesque sit amet porttitor eget dolor morbi non.
+                     </p>
+                  </div>
+                  <div class="col">
+                     <img src="img/image-02.jpg" alt="mountains landscape" />
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
    </body>
 </html>

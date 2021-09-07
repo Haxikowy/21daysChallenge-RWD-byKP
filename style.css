@@ -1,150 +1,111 @@
-/* 
-////// For this challenge ///////
-
-- All text is in the text.md file
-
-// Requirements
-   1. Get all the navigation items next to one another
-   2. Add a space between all the items
-*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap');
 
 *,
 *::before,
 *::after {
+   margin: 0;
+   padding: 0;
    box-sizing: border-box;
 }
 
-body {
-   margin: 0;
-   font-family: 'Roboto', sans-serif;
-   font-size: 1.3rem;
-}
+:root {
+   --main-clr: #f3eed9;
+   --accent-clr: #824936;
+   --alt-accent-clr: #222c2a;
 
-img {
-   max-width: 100%;
-}
+   --main-font: 'Roboto', sans-serif;
+   --accent-font: 'Playfair Display', serif;
 
-h1 {
-   font-size: 3rem;
-   margin-top: 0;
-}
+   --f-ligth: 300;
+   --f-regular: 400;
+   --f-black: 900;
 
-.flex {
-   display: flex;
-}
-
-.section-title {
-   color: #87629a;
-}
-
-.btn {
-   display: inline-block;
-   text-decoration: none;
-   text-transform: uppercase;
-   color: #23424a;
-   font-weight: 900;
-   background-color: #38cfd9;
-   padding: 0.75em 2em;
-   border-radius: 100px;
-}
-
-.btn:hover,
-.btn:focus {
-   opacity: 0.75;
+   font-family: var(--main-font);
 }
 
 .container {
-   width: 80%;
-   max-width: 1100px;
+   width: min(80%, 1128px);
    margin: 0 auto;
 }
 
 .row {
    display: flex;
    justify-content: space-between;
+
+   column-gap: 2.5em;
 }
 
 .col {
-   /* these are now flex items */
    width: 100%;
 }
 
-.col + .col {
-   margin-left: 30px;
+img {
+   width: 100%;
 }
 
-header {
-   background: #136c72;
-   padding: 0.9375em 0;
+h1 {
+   font-family: var(--accent-font);
+   font-size: 3.75rem;
+   font-weight: var(--f-black);
 }
-.nav {
-   justify-content: space-between;
-}
+h2 {
+   margin-bottom: 1em;
 
-.nav__list {
-   margin: 0;
-   padding: 0;
-   list-style: none;
+   font-family: var(--accent-font);
+   font-size: 2.25rem;
+   font-weight: var(--f-black);
+}
+p {
+   font-size: 1.3125rem;
+   font-weight: var(--f-regular);
+}
+.header {
+   min-height: 41.25em;
+   background-color: var(--main-clr);
+   display: flex;
    align-items: center;
 }
 
-.nav__item + .nav__item {
-   margin-left: 1em;
-}
-
-.nav__link {
-   color: #fff;
-   font-size: 1rem;
-   text-decoration: none;
+.header__text {
+   font-size: 1.125rem;
+   font-weight: var(--f-light);
+   letter-spacing: 0.5em;
+   text-align: center;
    text-transform: uppercase;
 }
 
-.nav__link--button {
-   display: inline-block;
-   background: #fff;
-   color: #136c72;
-   padding: 0.25em 1em;
-   border-radius: 10em;
+.header__title {
+   max-width: 70%;
+   text-align: center;
+   margin: 0 auto;
+   color: var(--accent-clr);
 }
 
-.nav__link:hover {
-   opacity: 0.75;
+.perks {
+   padding: 6em 0;
 }
-.logo img {
-   vertical-align: middle;
+
+.perks__title {
+   text-align: center;
+   color: var(--accent-clr);
 }
 
 .hero {
-   padding: 100px 0;
-   background-color: #23424a;
-   color: #fff;
+   background-color: var(--alt-accent-clr);
+   padding: 6em 0;
+}
+
+.hero__title {
+   color: var(--main-clr);
 }
 
 .hero__text {
-   width: 62%;
+   color: white;
+}
+.hero + .hero {
+   background-color: var(--accent-clr);
 }
 
-.hero__img {
-   width: 32%;
-   align-self: flex-start;
-}
-
-.hero p {
-   margin-bottom: 3em;
-}
-
-.main {
-   margin-top: 3em;
-}
-
-.primary-content {
-   width: 62%;
-}
-
-.sidebar {
-   width: 32%;
-   padding: 1em;
-   text-align: center;
-   color: #fff;
-   background-color: #136c72;
+.hero + .hero .row {
+   flex-direction: row-reverse;
 }
