@@ -77,13 +77,15 @@ header {
    background: #136c72;
    padding: 0.9375em 0;
 }
+.nav {
+   justify-content: space-between;
+}
 
 .nav__list {
    margin: 0;
    padding: 0;
    list-style: none;
-
-   justify-content: space-between;
+   align-items: center;
 }
 
 .nav__item + .nav__item {
@@ -107,6 +109,9 @@ header {
 
 .nav__link:hover {
    opacity: 0.75;
+}
+.logo img {
+   vertical-align: middle;
 }
 
 .hero {
