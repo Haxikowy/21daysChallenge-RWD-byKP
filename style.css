@@ -109,3 +109,21 @@ p {
 .hero + .hero .row {
    flex-direction: row-reverse;
 }
+
+@media (max-width: 600px) {
+   .row {
+      display: block;
+   }
+   .hero__text,
+   .hero__img,
+   .primary-content,
+   .sidebar {
+      width: 100%;
+   }
+   .hero__img {
+      margin-top: 2em;
+   }
+   .container {
+      width: 90%;
+   }
+}
