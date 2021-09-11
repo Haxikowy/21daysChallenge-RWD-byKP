@@ -121,3 +121,9 @@ p {
     margin-top: 2em;
   }
 }
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 0.75rem;
+  }
+}
