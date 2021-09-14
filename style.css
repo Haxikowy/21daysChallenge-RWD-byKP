@@ -1,129 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap');
+/* Challenge
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+   Make the navigation layout work
+   on both mobile and large screens.
+
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-:root {
-  --main-clr: #f3eed9;
-  --accent-clr: #824936;
-  --alt-accent-clr: #222c2a;
-
-  --main-font: 'Roboto', sans-serif;
-  --accent-font: 'Playfair Display', serif;
-
-  --f-ligth: 300;
-  --f-regular: 400;
-  --f-black: 900;
-
-  font-family: var(--main-font);
-}
-
-.container {
-  width: min(80%, 1128px);
-  margin: 0 auto;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-
-  column-gap: 2.5em;
-}
-
-.col {
-  width: 100%;
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
 }
 
 img {
-  width: 100%;
+    max-width: 100%;
 }
 
 h1 {
-  font-family: var(--accent-font);
-  font-size: 3.75rem;
-  font-weight: var(--f-black);
-}
-h2 {
-  margin-bottom: 1em;
-
-  font-family: var(--accent-font);
-  font-size: 2.25rem;
-  font-weight: var(--f-black);
-}
-p {
-  font-size: 1.3125rem;
-  font-weight: var(--f-regular);
-}
-.header {
-  min-height: 41.25em;
-  background-color: var(--main-clr);
-  display: flex;
-  align-items: center;
+    font-size: 3rem;
+    margin-top: 0;
 }
 
-.header__text {
-  font-size: 1.125rem;
-  font-weight: var(--f-light);
-  letter-spacing: 0.5em;
-  text-align: center;
-  text-transform: uppercase;
+.section-title {
+    color: #87629A;
 }
 
-.header__title {
-  max-width: 70%;
-  text-align: center;
-  margin: 0 auto;
-  color: var(--accent-clr);
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
 }
 
-.perks {
-  padding: 6em 0;
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
 }
 
-.perks__title {
-  text-align: center;
-  color: var(--accent-clr);
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
 }
+
+header {
+    background: #136c72;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+
+.logo {
+    height: 30px;
+}
+
 
 .hero {
-  background-color: var(--alt-accent-clr);
-  padding: 6em 0;
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
 }
 
-.hero__title {
-  color: var(--main-clr);
-}
-
-.hero__text {
-  color: white;
-}
-.hero + .hero {
-  background-color: var(--accent-clr);
-}
-
-.hero + .hero .row {
-  flex-direction: row-reverse;
-}
-
-@media (max-width: 800px) {
-  .header__title {
-    max-width: 100%;
-  }
-  .row {
-    display: block;
-  }
-  .col + .col {
+.hero__img {
     margin-top: 2em;
-  }
 }
 
-@media (max-width: 600px) {
-  :root {
-    font-size: 0.75rem;
-  }
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+
+.sidebar {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
+
+}
+
+
+
+@media (min-width: 800px) {
+
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        height: auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .hero__text {
+        width: 62%;
+    }
+    
+    .hero__img {
+        width: 32%;
+        align-self: flex-start;
+        margin: 0;
+    }
+    
+    .primary-content {
+        width: 62%;
+    }
+
+    .sidebar {
+        width: 32%;
+    }
+    
+    
 }
