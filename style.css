@@ -142,26 +142,28 @@ header {
   margin: 1em 0 0;
   padding: 0;
 }
+.nav__item {
+  margin-top: 0.75em;
+}
 
 .nav__link {
-  display: inline-block;
-  margin: 0.75em 0;
   color: #e6e6e6;
   font-size: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+  transition: opacity 150ms ease-in-out;
 }
 
 .nav__link--button {
+  display: inline-block;
   color: #136c72;
   padding: 0.5em 1em;
   background-color: #fff;
   border-radius: 150px;
-  transition: opacity 150ms ease-in-out;
 }
-.nav__link--button:hover,
-.nav__link--button:focus {
+.nav__link:hover,
+.nav__link:focus {
   opacity: 0.75;
 }
 
@@ -201,11 +203,11 @@ header {
 
   .nav {
     visibility: visible;
-    position: static;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
     height: auto;
   }
   .nav__list {
@@ -213,12 +215,11 @@ header {
     margin: 0;
     margin-left: 1em;
   }
+  .nav__item {
+    margin: 0;
+  }
   .nav__item + .nav__item {
     margin-left: 0.5em;
-  }
-
-  .nav__link {
-    margin: 0;
   }
 
   .row {
