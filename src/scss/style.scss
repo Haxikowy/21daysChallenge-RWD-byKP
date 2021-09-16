@@ -1,0 +1,19 @@
+@use 'resets';
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
+
+$fonts: (
+  'main': 'Oswald',
+  'accent': 'Montserrat',
+);
+$font-weight: (
+  'regular': 400,
+  'bold': 700,
+);
+$theme-color: (
+  'main': #3b4050,
+  'dark': #2e323f,
+  'light': #6f737f,
+  'white': #fff,
+  'brown': #a59678,
+);
