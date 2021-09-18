@@ -8,49 +8,54 @@
     <title>Last challenge</title>
   </head>
   <body>
-    <nav class="nav">
-      <div class="container row">
-        <div class="col">
-          <div class="nav__logo">
-            <img src="img/logo.svg" alt="company logo" />
-          </div>
-        </div>
-        <ul class="col nav__list">
-          <li class="nav__list--item">
-            <a href="" class="nav__list--link">home</a>
-          </li>
-          <li class="nav__list--item">
-            <a href="" class="nav__list--link">about</a>
-          </li>
-          <li class="nav__list--item">
-            <a href="" class="nav__list--link">contact</a>
-          </li>
-          <li class="nav__list--item">
-            <a href="" class="nav__list--link">sign in</a>
-          </li>
-          <li class="nav__list--item">
-            <a href="" class="nav__list--link button">sign up</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <header class="header">
       <div class="container row">
+        <button class="nav__toggle">
+          <span class="hamburger"></span>
+        </button>
+        <a href="#" class="header__logo">
+          <img src="img/logo.svg" alt="company logo" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list nav__list--primary">
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">home</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">about</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">contact</a>
+            </li>
+          </ul>
+          <ul class="nav__list nav__list--secondary">
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link">sign in</a>
+            </li>
+            <li class="nav__list--item">
+              <a href="#" class="nav__list--link button">sign up</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container row">
         <div class="col">
-          <h1 class="header__title">
+          <h1 class="hero__title">
             Responsive layouts
             <span class="accent-clr">don't have to be a struggle</span>
           </h1>
         </div>
         <div class="col">
-          <p class="header__text">
+          <p class="hero__text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <a href="#" class="header__button button">i want to learn</a>
+          <a href="#" class="hero__button button">i want to learn</a>
         </div>
       </div>
-    </header>
+    </section>
     <section class="section">
       <div class="container row">
         <div class="col">
@@ -167,5 +172,6 @@
         </div>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
